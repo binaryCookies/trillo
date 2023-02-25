@@ -1,0 +1,110 @@
+.container {
+  // 86.
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+
+  display: flex;
+  // 76. align along main axis
+  justify-content: space-between;
+  // align along cross axis
+  align-items: center;
+  // 86.
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 12rem;
+    // space between rows
+    align-content: space-around;
+  }
+}
+
+.content {
+  display: flex;
+
+  // 86.
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+
+  // grow shrink basis
+  flex: 0 0 18%;
+
+  // placing legal text at bottom of page
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  //background-color: #fff;
+
+  flex: 1;
+}
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+
+  // 86.
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  // 87.
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  // NOTE font-size is inherited from parent element
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+
+  // 86.
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  // 87.
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.user-reviews {
+  flex: 1;
+
+  // 84.
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
